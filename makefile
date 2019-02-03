@@ -76,13 +76,15 @@ defineassignment:
 
 # creates a folder which can serve as a publishable assignment
 assignmentfolder:
-	make setassignment
+	make setsample
 	make doxy
+	make setassignment
 	mkdir ../assignment
 	cp -R * ../assignment
 	rm ../assignment/*.sample
 	rm ../assignment/*.assignment
 	make cleanall
+	make setsample
 	@echo ****************************************************************
 	@echo Remove lines in makefile indicated with \"to be inserted by student\"
 
